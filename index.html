@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <form id="form-orcamento">
+
+        <div>
+            <label for="valor-produto">Valor do produto:</label>
+            <input id="valor-produto" type="number" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="forma-pagamento">Forma de pagamento:</label>
+            <select id="forma-pagamento" required>
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+                <option value="cartao_avista">Cartão a vista</option>
+                <option value="cartao_parcelado">Cartão Parcelado</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="tipo-entrega">Tipo de entrega:</label>
+            <select id="tipo-entrega" required>
+                <option value="retirada">Retirada</option>
+                <option value="padrao">Entrega Padrão</option>
+                <option value="expressa">Entrega Expressa</option>
+                <option value="super_expressa">Entrega Super Expressa</option>
+            </select>
+        </div>
+
+        <button type="submit">Calcular Orçamento</button>
+    </form>
+
+    <div id="painel-resultado" class="hidden">
+        <h1>Resultado do Orçamento:</h1>
+        <p>Total sem desconto: <strong id="resultado-valor-inicial">R$ 0.00</strong></p>
+        <p>Valor do desconto: <strong id="resultado-desconto">R$ 0.00</strong></p>
+        <p>Total com desconto: <strong id="resultado-valor-final">R$ 0.00</strong></p>
+    </div>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
